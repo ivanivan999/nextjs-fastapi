@@ -31,3 +31,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 https://nextjs-fastapi-psi-seven.vercel.app/
+
+add github workflow
+using Azure Container Registry (ACR) and Azure Container Instances (ACI), all triggered from GitHub Actions
