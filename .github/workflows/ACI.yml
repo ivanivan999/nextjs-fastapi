@@ -20,7 +20,7 @@ jobs:
         with:
           name: myapp
           resource-group: azresource
-          dns-name-label: myappdeployment
+          dns-name-label: myapp${{ github.run_number }}
           image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/app:latest
           location: 'canadacentral'
           registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
