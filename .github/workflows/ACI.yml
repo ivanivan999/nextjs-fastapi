@@ -23,6 +23,9 @@ jobs:
           dns-name-label: myappdeployment
           image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/app:latest
           location: 'canadacentral'
+          registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+          registry-username: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientId }}
+          registry-password: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientSecret }}      
           cpu: 1
           memory: 1.5
           ports: 80
