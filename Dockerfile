@@ -34,6 +34,10 @@ ENV NODE_ENV production
 # Learn more here: https://nextjs.org/telemetry
 ENV NEXT_TELEMETRY_DISABLED 1
 
+# Install pnpm in production stage
+RUN corepack enable
+RUN corepack prepare pnpm@latest --activate
+
 # Set correct permissions for nextjs user and don't run as root
 WORKDIR /app
 COPY --from=builder /app/.next ./.next
